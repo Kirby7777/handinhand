@@ -8870,6 +8870,7 @@ GameObject:
   - component: {fileID: 951271160}
   - component: {fileID: 951271159}
   - component: {fileID: 951271163}
+  - component: {fileID: 951271164}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
@@ -8890,7 +8891,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.62061954, y: -1.6679151}
+  m_Offset: {x: 0.62061954, y: -1.6991706}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8901,7 +8902,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5692406, y: 2.7072964}
+  m_Size: {x: 2.5692406, y: 2.7698073}
   m_EdgeRadius: 0
 --- !u!50 &951271160
 Rigidbody2D:
@@ -9004,6 +9005,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6471384d3a8f40040aff167feb905ef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &951271164
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951271158}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af5b5081b4eea4e418b5e90ff5c78a02, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1866479178
 GameObject:
   m_ObjectHideFlags: 0
