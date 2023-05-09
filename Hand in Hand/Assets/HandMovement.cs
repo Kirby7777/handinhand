@@ -2,60 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class HandMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
-    public bool doublejump;
-    public bool hasjumped;
+    Rigidbody2D rb;
+    BoxCollider2D coll;
+    [SerializeField] LayerMask JumpableGround;
+    
     void Start()
     {
-        hasjumped = false;
+        rb = GetComponent<Rigidbody2D>();
+        coll = GetComponent<BoxCollider2D>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButton("Jump") && isGrounded())
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 7);
+        }
+
+        float dirX = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2 (dirX * speed, rb.velocity.y);
         
 
-        if (Input.GetKeyDown(KeyCode.UpArrow)) 
-        {
-            if (hasjumped == false)
-            {
-                GetComponent<Rigidbody2D>().velocity = new Vector3(0, 7, 0);
-              
-            }
-            hasjumped = true;
-
-
-        }
-
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.position += Vector3.right * speed * Time.deltaTime;
-        }
-
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.position += Vector3.left * speed * Time.deltaTime;
-        }
     }
 
-
-    private void OnCollisionEnter2D(Collision2D collision)
+     private bool isGrounded ()
     {
-        if (doublejump == false)
-        {
-            hasjumped = false;
-        }
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0, Vector2.down, 0.5f, JumpableGround);
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (doublejump == false)
-        {
-            hasjumped = true;
-        }
-    }
+   
+    
 }
