@@ -12,11 +12,11 @@ public class HandMovement : MonoBehaviour
     BoxCollider2D coll;
     [SerializeField] LayerMask JumpableGround;
     
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
-        
     }
 
     // Update is called once per frame
@@ -26,12 +26,11 @@ public class HandMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, 7);
         }
-
         float dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2 (dirX * speed, rb.velocity.y);
-        
-
     }
+
+
 
      private bool isGrounded ()
     {
