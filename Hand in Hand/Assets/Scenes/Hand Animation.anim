@@ -22,7 +22,7 @@ AnimationClip:
     - time: 0
       value: {fileID: 21300000, guid: c00ce01594b1a9f4e8018862ce46bec0, type: 3}
     - time: 0.41666666
-      value: {fileID: 21300000, guid: f9b4e4d5c6910754eb385119f2c36131, type: 3}
+      value: {fileID: 21300000, guid: c00ce01594b1a9f4e8018862ce46bec0, type: 3}
     - time: 0.8333333
       value: {fileID: 21300000, guid: f9b4e4d5c6910754eb385119f2c36131, type: 3}
     attribute: m_Sprite
@@ -45,7 +45,7 @@ AnimationClip:
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 21300000, guid: c00ce01594b1a9f4e8018862ce46bec0, type: 3}
-    - {fileID: 21300000, guid: f9b4e4d5c6910754eb385119f2c36131, type: 3}
+    - {fileID: 21300000, guid: c00ce01594b1a9f4e8018862ce46bec0, type: 3}
     - {fileID: 21300000, guid: f9b4e4d5c6910754eb385119f2c36131, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
